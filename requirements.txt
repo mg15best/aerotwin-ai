@@ -1,30 +1,28 @@
-# Core data science
-pandas>=2.0.0
-numpy>=1.26.0
+# Core
+python-dotenv>=1.0.0
 
-# Visualisation
-matplotlib>=3.8.0
-seaborn>=0.13.0
-
-# Jupyter
+# Notebook
 notebook>=7.0.0
 ipykernel>=6.29.0
 
-# AI / LLM
-openai>=1.30.0
+# LangChain / LangGraph
 langchain>=0.2.0
-langchain-openai>=0.1.0
 langchain-community>=0.2.0
+langgraph>=0.2.0
 
-# Vector store / embeddings
-faiss-cpu>=1.8.0
-tiktoken>=0.7.0
+# Gemini
+langchain-google-genai>=1.0.0
+google-generativeai>=0.7.0
 
-# PDF / document ingestion
+# Vector database
+chromadb>=0.5.0
+langchain-chroma>=0.1.0
+
+# Document loading
 pypdf>=4.0.0
-unstructured>=0.13.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
 
 # Utilities
-python-dotenv>=1.0.0
 tqdm>=4.66.0
 requests>=2.31.0
