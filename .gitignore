@@ -22,14 +22,9 @@ ENV/
 # Environment variables
 .env
 
-# Data files (raw and processed data should not be committed)
-data/raw/**
-!data/raw/
-!data/raw/**/
-data/processed/**
-!data/processed/
-!data/raw/**/.gitkeep
-!data/processed/.gitkeep
+# Data
+data/processed/
+chroma_db/
 
 # OS
 .DS_Store
