@@ -44,7 +44,8 @@ aerotwin-ai/
 │   └── 01_aerotwin_ai.ipynb     # Notebook principal
 │
 ├── outputs/
-│   └── demo_questions.md        # Preguntas de demostración y ejemplos documentados
+│   └── demo_questions.md        # Preguntas de demostración
+│   └── demo_responses.md        # Respuestas generadas y fuentes recuperadas
 │
 ├── README.md
 ├── requirements.txt
