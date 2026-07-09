@@ -154,7 +154,6 @@ Por defecto se utiliza `INDEX_MODE = "demo"` para garantizar que el proyecto pue
 
 Para una indexación completa del corpus, se puede cambiar en el notebook:
 
-```python
 INDEX_MODE = "full"
 
 ---
