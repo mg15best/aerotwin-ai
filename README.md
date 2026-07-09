@@ -174,9 +174,19 @@ Reglas de respuesta:
 - Mantén la coherencia con la conversación previa.
 - Responde en el mismo idioma de la pregunta del usuario, salvo que se solicite otro idioma.
 - Al final de la respuesta, incluye una breve sección "Fuentes consultadas" con los nombres de los documentos recuperados.
-"""
 
-print(SYSTEM_PROMPT[:1800])
+
+El prompt se ha diseñado para cumplir los objetivos principales del proyecto y de la actividad:
+
+Define un rol experto claro: AeroTwin AI no es un chatbot genérico, sino un asistente especializado en aeropuertos de Aena.
+Delimita la base de conocimiento: las respuestas deben apoyarse en documentación oficial de Aena y ENAIRE/AIP.
+Diferencia dos audiencias: pasajeros y profesionales de la industria turística/aérea.
+Reduce el riesgo de alucinaciones: el modelo debe responder únicamente con el contexto recuperado.
+Reconoce límites del MVP: el asistente no proporciona vuelos en tiempo real, alertas operativas ni datos no indexados.
+Refuerza la trazabilidad: cada respuesta debe indicar las fuentes internas consultadas.
+Facilita la demo: permite mostrar claramente dos estilos de respuesta y una conversación con memoria.
+
+Este diseño mejora la calidad del RAG porque el modelo no solo recibe documentos recuperados, sino también reglas claras sobre cómo usarlos, cómo adaptar la respuesta y qué hacer cuando la información no está disponible.
 
 ---
 
