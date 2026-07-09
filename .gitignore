@@ -21,6 +21,7 @@ ENV/
 
 # Environment variables
 .env
+.streamlit/secrets.toml
 
 # Data
 data/processed/
