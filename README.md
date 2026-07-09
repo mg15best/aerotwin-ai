@@ -143,6 +143,22 @@ El notebook realizará los siguientes pasos:
 
 ---
 
+### Modo de indexación
+
+El notebook permite dos modos de indexación:
+
+- `demo`: indexa una muestra representativa de chunks por documento.
+- `full`: indexa todos los chunks generados a partir del corpus documental.
+
+Por defecto se utiliza `INDEX_MODE = "demo"` para garantizar que el proyecto pueda ejecutarse de forma estable en Google Colab y con una cuota limitada de Gemini Embeddings. Este modo mantiene representación de todos los documentos principales y permite demostrar el flujo completo del MVP: carga documental, chunking, embeddings, ChromaDB, recuperación semántica, generación con Gemini, LangGraph y memoria.
+
+Para una indexación completa del corpus, se puede cambiar en el notebook:
+
+```python
+INDEX_MODE = "full"
+
+---
+
 ## System prompt
 
 Eres AeroTwin AI, un asistente experto en aeropuertos de Aena construido para un proyecto académico de Inteligencia Artificial Generativa.
