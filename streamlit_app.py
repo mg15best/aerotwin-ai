@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import re
 import tempfile
+import textwrap
 from typing import List, Dict, Tuple
 
 import streamlit as st
@@ -56,7 +57,7 @@ MODE_LABELS = {
 def inject_custom_css() -> None:
     """Aplica una identidad visual aeroportuaria sin alterar la lógica de la app."""
     st.markdown(
-        """
+        textwrap.dedent("""
         <style>
         :root {
             --at-bg: #050b14;
@@ -588,20 +589,20 @@ def inject_custom_css() -> None:
             }
         }
         </style>
-        """,
+        """).strip(),
         unsafe_allow_html=True,
     )
 
 
 def render_sidebar_brand() -> None:
     st.markdown(
-        """
+        textwrap.dedent("""
         <div class="sidebar-brand">
             <div class="sidebar-brand__icon">✈</div>
             <div class="sidebar-brand__title">AeroTwin AI</div>
             <div class="sidebar-brand__subtitle">Airport knowledge assistant · RAG + Gemini</div>
         </div>
-        """,
+        """).strip(),
         unsafe_allow_html=True,
     )
 
@@ -609,7 +610,7 @@ def render_sidebar_brand() -> None:
 def render_hero(app_mode: str) -> None:
     mode_text = "DEMO LOCAL" if app_mode == "Demo sin API" else "GEMINI LIVE"
     st.markdown(
-        f"""
+        textwrap.dedent(f"""
         <section class="hero-shell">
             <div>
                 <div class="hero-kicker">
@@ -647,14 +648,14 @@ def render_hero(app_mode: str) -> None:
                 </div>
             </div>
         </section>
-        """,
+        """).strip(),
         unsafe_allow_html=True,
     )
 
 
 def render_section_heading(icon: str, eyebrow: str, title: str) -> None:
     st.markdown(
-        f"""
+        textwrap.dedent(f"""
         <div class="section-heading">
             <div class="section-heading__icon">{icon}</div>
             <div>
@@ -662,14 +663,14 @@ def render_section_heading(icon: str, eyebrow: str, title: str) -> None:
                 <div class="section-heading__title">{title}</div>
             </div>
         </div>
-        """,
+        """).strip(),
         unsafe_allow_html=True,
     )
 
 
 def render_mode_banner(icon: str, title: str, text: str) -> None:
     st.markdown(
-        f"""
+        textwrap.dedent(f"""
         <div class="mode-banner">
             <div class="mode-banner__icon">{icon}</div>
             <div>
@@ -677,19 +678,19 @@ def render_mode_banner(icon: str, title: str, text: str) -> None:
                 <p class="mode-banner__text">{text}</p>
             </div>
         </div>
-        """,
+        """).strip(),
         unsafe_allow_html=True,
     )
 
 
 def render_footer() -> None:
     st.markdown(
-        """
+        textwrap.dedent("""
         <div class="footer-shell">
             <span>© AeroTwin AI · MVP académico de Inteligencia Artificial Generativa</span>
             <span class="footer-badge">⚠ Sin datos de vuelos en tiempo real</span>
         </div>
-        """,
+        """).strip(),
         unsafe_allow_html=True,
     )
 
@@ -1119,22 +1120,22 @@ with st.sidebar:
 
     if has_google_api_key():
         st.markdown(
-            """
+            textwrap.dedent("""
             <div class="api-status api-status--ready">
                 <span class="api-status__dot"></span>
                 API de Gemini configurada
             </div>
-            """,
+            """).strip(),
             unsafe_allow_html=True,
         )
     else:
         st.markdown(
-            """
+            textwrap.dedent("""
             <div class="api-status">
                 <span class="api-status__dot"></span>
                 API de Gemini no configurada
             </div>
-            """,
+            """).strip(),
             unsafe_allow_html=True,
         )
 
