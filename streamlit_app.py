@@ -629,24 +629,6 @@ def render_hero(app_mode: str) -> None:
                     <span class="hero-tag">▣ Fuentes recuperadas</span>
                 </div>
             </div>
-
-            <div class="airport-board" aria-label="Panel visual de aeropuertos">
-                <div class="board-header">
-                    <span>Código</span><span>Aeropuerto</span><span>Estado</span>
-                </div>
-                <div class="board-row">
-                    <span class="board-code">TFS</span><span class="board-airport">Tenerife Sur</span><span class="board-status">READY</span>
-                </div>
-                <div class="board-row">
-                    <span class="board-code">TFN</span><span class="board-airport">Tenerife Norte</span><span class="board-status">READY</span>
-                </div>
-                <div class="board-row">
-                    <span class="board-code">MAD</span><span class="board-airport">Madrid-Barajas</span><span class="board-status">READY</span>
-                </div>
-                <div class="board-row">
-                    <span class="board-code">BCN</span><span class="board-airport">Barcelona-El Prat</span><span class="board-status">READY</span>
-                </div>
-            </div>
         </section>
         """).strip(),
         unsafe_allow_html=True,
